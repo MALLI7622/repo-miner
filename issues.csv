@@ -1,0 +1,51 @@
+id,number,title,user,state,created_at,closed_at,comments,open_duration_days
+3475170497,4365,Piloto automático,jfjeifkvbk,open,2025-10-01T21:22:53+00:00,,0,
+3473194887,4363,Test from Tenant B POC,pruthvis,closed,2025-10-01T11:38:18+00:00,2025-10-01T11:42:37+00:00,0,0.0
+3473194329,4362,Test from Tenant A POC,cyberlynxs-max,closed,2025-10-01T11:38:10+00:00,2025-10-01T11:42:26+00:00,0,0.0
+3471525875,4361,The Hate U Gave,moniquenhenry86,closed,2025-10-01T00:30:38+00:00,2025-10-01T00:34:00+00:00,2,0.0
+3471515873,4360,New Beginnings,moniquenhenry86,open,2025-10-01T00:27:16+00:00,,0,
+3461806780,4357,[DRAFT] Feat: Création de compte utilisateur,dust-agent[bot],open,2025-09-28T12:55:26+00:00,,0,
+3455749672,4355,[CjlZRgYFDZ] Updates fail: cannot execute UPDATE in a read-only transaction (postgres tool sets transactions read-only),flexus-caw[bot],open,2025-09-26T04:27:45+00:00,,0,
+3449083566,4346,Include <studio.h>,ahmadfarhat27,open,2025-09-24T11:48:23+00:00,,1,
+3437981597,4339,Execute: transaction ,ferg376,open,2025-09-21T08:03:55+00:00,,0,
+3425116201,4334,Abd,riverajoellopez13-ctrl,open,2025-09-17T07:51:59+00:00,,0,
+3419350635,4331,Test smoke issue,xanpena,open,2025-09-15T20:14:12+00:00,,0,
+3418214903,4330,problem with flutter in vs code when i run  flutter,NewDev2007,open,2025-09-15T14:25:20+00:00,,0,
+3417758308,4329,Your issue title,jeyansh07-create,open,2025-09-15T12:28:54+00:00,,0,
+3417233136,4328,Bug Report: Cannot load homepage,kkzz-730,open,2025-09-15T10:03:48+00:00,,0,
+3416060155,4326,자기소개 추기,shkim6663,open,2025-09-15T02:42:23+00:00,,0,
+3413285952,4319,[Feature] 자기소개 추가,B-ChJ,closed,2025-09-13T11:52:39+00:00,2025-09-15T01:53:11+00:00,0,1.0
+3409707091,4315,자기소개 추가 테스트,UK-spring,open,2025-09-12T09:36:35+00:00,,0,
+3409375424,4312,자기소개 추가,sjww0604,closed,2025-09-12T08:08:59+00:00,2025-09-12T10:08:52+00:00,0,0.0
+3400701318,4303,Test Issue,aiur100,open,2025-09-10T02:59:08+00:00,,0,
+3400685924,4302,Test Issue,aiur100,open,2025-09-10T02:48:59+00:00,,0,
+3400685440,4301,Test Issue,aiur100,open,2025-09-10T02:48:39+00:00,,0,
+3400684170,4300,Test Issue,aiur100,open,2025-09-10T02:48:08+00:00,,0,
+3398652335,4299,BUG,ghost,open,2025-09-09T14:06:35+00:00,,0,
+3396955657,4294,Test Issue from GitHub Bot,sophiaxuatreplit,open,2025-09-09T07:00:26+00:00,,1,
+3396824603,4293,Test Issue,sophiaxuatreplit,open,2025-09-09T06:17:10+00:00,,1,
+3396549900,4292,Piloto,jfjeifkvbk,open,2025-09-09T04:32:54+00:00,,1,
+3393643368,4290,Rash,rashworld-max,open,2025-09-08T10:40:47+00:00,,0,
+3393100582,4289,Octocat/hello-world,rashworld-max,closed,2025-09-08T08:10:06+00:00,2025-09-10T14:22:35+00:00,0,2.0
+3391476515,4286,Hello from the engine room,kjacone-github-app[bot],open,2025-09-07T10:29:30+00:00,,0,
+3391476491,4285,Hello from the engine room,kjacone-github-app[bot],open,2025-09-07T10:29:27+00:00,,0,
+3391476461,4284,Hello from the engine room,kjacone-github-app[bot],open,2025-09-07T10:29:25+00:00,,0,
+3388796113,4282,Test issue for MCP tool functionality,ssan6,closed,2025-09-05T21:17:44+00:00,2025-09-16T15:52:37+00:00,0,10.0
+3386480921,4281,__,personalarito,open,2025-09-05T06:52:12+00:00,,0,
+3385251372,4280,MCP Connectivity Probe (safe test),wufayuzhi,closed,2025-09-04T19:57:46+00:00,2025-09-04T19:58:09+00:00,0,0.0
+3377464870,4276,Viha,radouanihamide-cmyk,open,2025-09-02T20:54:24+00:00,,0,
+3374985837,4274,Bug Report: Cannot load homepage.,zjjj070016-dev,open,2025-09-02T08:26:22+00:00,,0,
+3373843460,4273,500our,wjan85913-afk,open,2025-09-01T22:05:47+00:00,,1,
+3370549476,4270,New Issue Title,joebloggs4788,open,2025-08-31T18:15:42+00:00,,0,
+3365414170,4263,Piloto,jfjeifkvbk,open,2025-08-29T04:27:25+00:00,,0,
+3365413575,4262,Piloto,jfjeifkvbk,open,2025-08-29T04:26:56+00:00,,0,
+3359656641,4258,500 Error During Login,PagelsR,open,2025-08-27T14:45:06+00:00,,0,
+3355414356,4254,Test Issue,chen0408,open,2025-08-26T12:19:05+00:00,,0,
+3351522078,4252,"Resolve discrepancy found in list_issues, investigate via get_file_contents",MeghaBluexkye,open,2025-08-25T11:46:32+00:00,,0,
+3349977616,4251,Test,ryanrussell,open,2025-08-24T22:51:25+00:00,,0,
+3349977593,4250,Test,ryanrussell,open,2025-08-24T22:51:23+00:00,,0,
+3344257786,4240,Account management,elomelomelom44-spec,open,2025-08-22T06:03:38+00:00,,0,
+3344227242,4239,h,hagejay44-code,open,2025-08-22T05:46:09+00:00,,0,
+3334278102,4224,update readme,mohhsen67,open,2025-08-19T12:54:38+00:00,,0,
+3333635657,4223,pro-api.solscan.io/v2.0/account/transactions,abo-L,open,2025-08-19T09:31:00+00:00,,0,
+3328201183,4209,Test from n8n,barnesamg,open,2025-08-17T10:23:03+00:00,,0,
