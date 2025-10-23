@@ -60,6 +60,76 @@ def _normalize_commit(commit) -> Dict[str, str]:
         "message": message or "",
     }
 
+def merge_and_summarize(commits_df: pd.DataFrame, issues_df: pd.DataFrame) -> None:
+    """
+    Takes two DataFrames (commits and issues) and prints:
+      - Top 5 committers by commit count
+      - Issue close rate (closed/total)
+      - Average open duration for closed issues (in days)
+
+    Additionally, normalizes date columns and computes a by-day join of commit/issue activity.
+    """
+    # --- copies so we don't mutate caller-owned DFs ---
+    commits = commits_df.copy()
+    issues  = issues_df.copy()
+
+    # 1) Normalize date/time columns to pandas datetime
+    commits['date'] = pd.to_datetime(commits['date'], errors='coerce', utc=True)
+    issues['created_at'] = pd.to_datetime(issues['created_at'], errors='coerce', utc=True)
+    # Some inputs may have None/NaN or empty string; coerce handles that.
+    issues['closed_at']  = pd.to_datetime(issues['closed_at'],  errors='coerce', utc=True)
+
+    # 2) Top 5 committers
+    print("Top 5 committers")
+    if 'author' in commits and not commits.empty:
+        top_committers = commits['author'].value_counts().head(5)
+        for author, count in top_committers.items():
+            print(f"- {author}: {count} commits")
+    else:
+        print("- (no commits)")
+
+    # 3) Issue close rate (closed/total) with 2-decimal precision
+    if not issues.empty and 'state' in issues:
+        closed_cnt = issues['state'].astype(str).str.lower().eq('closed').sum()
+        total_cnt  = len(issues)
+        close_rate = (closed_cnt / total_cnt) if total_cnt > 0 else 0.0
+        print(f"Issue close rate: {close_rate:.2f}")
+    else:
+        print("Issue close rate: 0.00")
+
+    # 4) Average open duration (days) for closed issues
+    # Only consider issues that have a valid closed_at and created_at
+    if not issues.empty:
+        closed_mask = issues['closed_at'].notna() & issues['created_at'].notna()
+        durations = (issues.loc[closed_mask, 'closed_at'] - issues.loc[closed_mask, 'created_at']).dt.total_seconds() / 86400.0
+        if not durations.empty:
+            avg_days = float(durations.mean())
+            print(f"Avg. issue open duration: {avg_days:.2f} days")
+        else:
+            print("Avg. issue open duration: N/A")
+    else:
+        print("Avg. issue open duration: N/A")
+
+    # 5) (Optional) Join commits & issues by day (not required for the printed metrics, but useful)
+    #    We compute it silently to respect the test output, but keep here for future use.
+    if not commits.empty or not issues.empty:
+        commits_by_day = (
+            commits.assign(day=commits['date'].dt.date)
+                   .groupby('day', dropna=True)
+                   .size()
+                   .rename('commits')
+        )
+        issues_by_day = (
+            issues.assign(day=issues['created_at'].dt.date)
+                  .groupby('day', dropna=True)
+                  .size()
+                  .rename('issues_created')
+        )
+        # Left/right outer join to cover all active days
+        by_day = pd.concat([commits_by_day, issues_by_day], axis=1).fillna(0)
+        # If you want to inspect later, you can return or log `by_day`; we avoid printing to keep output minimal.
+
+
 
 def fetch_commits(repo_full_name: str, max_commits: Optional[int] = None) -> pd.DataFrame:
     """
